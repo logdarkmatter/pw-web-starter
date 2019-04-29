@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  url: '/pw-server',
+  production: true,
+  hmr: false,
 };

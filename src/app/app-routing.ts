@@ -3,6 +3,7 @@ import {Routes, RouterModule} from '@angular/router';
 
 import {HomeComponent} from './layouts/home';
 import {LoginComponent} from './layouts/login';
+import {ProductFormComponent} from './layouts/product';
 import {AuthGuard} from './shared/guards';
 
 const routes: Routes = [
@@ -14,6 +15,11 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
+  },
+  {
+    path: 'product',
+    component: ProductFormComponent,
+    canActivate: [AuthGuard],
   },
 
   // otherwise redirect to home

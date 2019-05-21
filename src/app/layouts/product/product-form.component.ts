@@ -11,11 +11,11 @@ import {IProduct, Product} from './';
 })
 export class ProductFormComponent implements OnInit, OnDestroy {
   public product: IProduct;
-  constructor(private pproductService: ProductService) {}
+  constructor(private productService: ProductService) {}
 
   public ngOnInit() {
     this.product = new Product();
-    this.pproductService.getAll().subscribe(res => {
+    this.productService.getAll().subscribe(res => {
       this.product = res[0];
     });
   }
@@ -24,11 +24,11 @@ export class ProductFormComponent implements OnInit, OnDestroy {
 
   public saveProduct() {
     if (this.product.id === undefined) {
-      this.pproductService.create(this.product).subscribe(res => {
+      this.productService.create(this.product).subscribe(res => {
         this.product = res;
       });
     } else {
-      this.pproductService.update(this.product).subscribe(res => {
+      this.productService.update(this.product).subscribe(res => {
         this.product = res;
       });
     }

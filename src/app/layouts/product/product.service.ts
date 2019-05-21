@@ -20,11 +20,11 @@ export class ProductService {
   }
 
   create(product: IProduct): Observable<IProduct> {
-    return this.http.post<IProduct>(this.resourceUrl, product);
+    return this.http.post<IProduct>(`${this.resourceUrl}/create`, product);
   }
 
   update(product: IProduct): Observable<IProduct> {
-    return this.http.put<IProduct>(this.resourceUrl, product);
+    return this.http.put<IProduct>(`${this.resourceUrl}/update`, product);
   }
 
   delete(id: number): Observable<any> {

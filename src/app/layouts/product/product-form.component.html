@@ -7,5 +7,26 @@
             <input type="text" class="form-control" name="productNameInput" id="productNameInput" [(ngModel)]="product.productName" placeholder="Product Name" required/>
         </div>
     </div>
+     <div class="col-md-6">
+        <div class="form-group">
+            <label class="form-control-label" for="productCodeInput">Product Code</label>
+            <input type="text" class="form-control" name="productCodeInput" id="productCodeInput" [(ngModel)]="product.productCode" placeholder="Product Code" required/>
+        </div>
+    </div>
   </div>
+  <div class="row">
+    <div class="col-md-6">
+        <div class="form-group">
+            <label class="form-control-label" for="productDescInput">Product Desc</label>
+            <input type="text" class="form-control" name="productDescInput" id="productDescInput" [(ngModel)]="product.desription" placeholder="Product Description" required/>
+        </div>
+    </div>
+     <div class="col-md-6">
+        <div class="form-group">
+            <label class="form-control-label" for="productBrandInput">Product Brand</label>
+            <input type="text" class="form-control" name="productBrandInput" id="productBrandInput" [(ngModel)]="product.brand" placeholder="Product Brand" required/>
+        </div>
+    </div>
+  </div>
+   <button type="button" class="btn btn-primary" (click)="saveProduct()">Save</button>
 </form>

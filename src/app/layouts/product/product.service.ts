@@ -3,7 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {environment} from '../../../environments/environment';
 
-import {IProduct} from './';
+import {IProduct} from './product.model';
 
 @Injectable({providedIn: 'root'})
 export class ProductService {
@@ -20,7 +20,7 @@ export class ProductService {
   }
 
   create(product: IProduct): Observable<IProduct> {
-    return this.http.post<IProduct>(`${this.resourceUrl}/create`, product);
+    return this.http.post<IProduct>(`${this.resourceUrl}/save`, product);
   }
 
   update(product: IProduct): Observable<IProduct> {
@@ -28,6 +28,6 @@ export class ProductService {
   }
 
   delete(id: number): Observable<any> {
-    return this.http.delete<any>(`${this.resourceUrl}/${id}`);
+    return this.http.delete<any>(`${this.resourceUrl}/delete/${id}`);
   }
 }

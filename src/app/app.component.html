@@ -9,7 +9,7 @@
         <a class="nav-link" routerLink="/">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/product">Product</a>
+        <a class="nav-link" routerLink="/product-list">Products</a>
       </li>
       <li class="nav-item">
         <a class="nav-item nav-link" (click)="logout()">Logout</a>
@@ -25,11 +25,7 @@
 
 <!-- main app container -->
 <div class="jumbotron">
-    <div class="container">
-        <div class="row-fluid">
-            <div class="col-md-6 offset-md-3">
-                <router-outlet></router-outlet>
-            </div>
-        </div>
+    <div class="container-fluid">
+        <router-outlet></router-outlet>
     </div>
 </div>
